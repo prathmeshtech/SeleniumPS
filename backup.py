@@ -14,10 +14,6 @@ time.sleep(3)
 
 driver.find_element_by_name("field-keywords").send_keys("mobiles")
 driver.find_element_by_id("nav-search-submit-button").send_keys(Keys.ENTER)
-mobile_name = driver.find_elements_by_tag_name(
-    "span")
-print(mobile_name.text)
-
 
 myFile = open('Amazon_values.csv', 'w')
 with myFile:
@@ -28,7 +24,6 @@ with myFile:
                     'Price': '12000', 'Rating': '4.1'})
     writer.writerow({'mobile_name': 'Motorola E4 plus',
                     'Price': '10000', 'Rating': '4.5'})
-
 time.sleep(3)
 driver.quit()
 print("Succesfully Completed")
